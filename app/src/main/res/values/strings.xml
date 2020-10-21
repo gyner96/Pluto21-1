@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Pluto21</string>
+    <string name="manage_account">Manage Account</string>
+    <string name="help">Help</string>
+    <string name="test">Test</string>
+    <string name="write_time">Write Time</string>
 </resources>

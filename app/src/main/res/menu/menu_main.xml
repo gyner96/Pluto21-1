@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainMenuManageAccount"
+        android:title="@string/manage_account"
+        />
+
+    <item
+        android:id="@+id/mainMenuHelp"
+        android:title="@string/help"
+        />
+
+    <item
+        android:id="@+id/mainMenuTest"
+        android:title="@string/test"
+        />
+
+    <item
+        android:id="@+id/idWriteTime"
+        android:title="@string/write_time"
+    />
+
+</menu>
