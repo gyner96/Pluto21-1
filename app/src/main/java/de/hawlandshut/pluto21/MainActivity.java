@@ -2,14 +2,20 @@ package de.hawlandshut.pluto21;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "xx MainActivity";
+    //just for testing
+    private boolean mIsSignedIn = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart called");
+
+        // TODO: Ergänzen, dass wir nur in die SignIn-Activity wollen, wenn der User nicht angemeldet ist.
+
+        if (this.mIsSignedIn) {
+            ;
+        } else {
+            Intent intent = new Intent(getApplication(),
+                    SignInActivity.class);
+            startActivity(intent);
+        }
     }
     // Erzeugen des Menus aus der XML-Datei(menu.main.xml)
     @Override
@@ -39,14 +55,17 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
             case R.id.mainMenuHelp:
+                Toast.makeText(getApplicationContext(), "You pressed Help", Toast.LENGTH_LONG).show();
                 Log.d(TAG, "Help was pressed");
                 return true;
 
             case R.id.mainMenuTest:
+                Toast.makeText(getApplicationContext(), "You pressed Test", Toast.LENGTH_LONG).show();
                 Log.d(TAG, "Test was pressed");
                 return true;
 
             case R.id.mainMenuManageAccount:
+                Toast.makeText(getApplicationContext(), "You pressed Manage Account", Toast.LENGTH_LONG).show();
                 Log.d(TAG, "ManageAccount was pressed.");
                 return true;
 
